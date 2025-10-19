@@ -1,0 +1,92 @@
+/* Navigation bar styles */
+nav{
+    background-color: #510983; /* purple background for nav */
+    color: #ffffff; /* make nav text readable on purple */
+    font-size: 16pt; /* increase nav text size */
+    padding: 12px 16px; /* add padding for spacing */
+    display: flex; /* use flexbox for layout */
+    gap: 5rem; /* space out nav items */
+    align-items: center; /* vertically center nav items */
+    border: 4px solid black; /* add border to nav */
+}
+
+/* Header navigation bar container */
+#topNavBar {
+    display: flex;  /* use flexbox for layout */
+    align-items: center; /* vertically center items */
+    gap: 0rem; /* no gap between items */
+}
+
+ /* Allow the nav bar to grow and fill the remaining header space */
+#HeaderNav {
+    flex: 1 1 auto; /* allow to grow and shrink, all elements stay proportional to each other*/
+    box-sizing: border-box; /* include padding/border in width */
+    display: flex; /* use flexbox for layout to have all of the navigation links next to each other*/
+    flex-direction: row; /* nav items laid out horizontally across the banner */
+    align-items: center; /* vertically center nav items */
+    justify-content: space-evenly; /* center and evenly space the nav items */
+}
+
+/* Logo styling */
+#MainLogo {
+    display: block; /*adjust display to block for proper sizing */
+    width: 97px; /* keep intended size, change if you want larger/smaller */
+    height: auto; /* maintain aspect ratio */
+    border-bottom: 4px solid black; /* add bottom border to logo */
+    border-left: 4px solid black; /* add left border to logo */
+    border-top: 4px solid black; /* add top border to logo */
+}
+:visited{
+    color: #FFFF00; /* visited link color */
+    text-decoration: none; /* remove underline from links */
+}
+/* Remove default paragraph spacing inside the nav so links sit inline wih the logo*/
+nav p {
+    margin: 0; /* Remove default paragraph spacing inside the nav so links sit inline */
+    padding: 0.25rem 0.5rem; /* add padding inside each nav item */
+    text-align: center; /* center text inside each nav item */
+    height: 55px; /* set fixed height for nav items */
+    font-size: 16pt; /* increase nav text size */
+    display: flex;  /* use flexbox for layout */
+    align-items: center; /* vertically center text inside each nav item */
+}
+
+/* Main content area styling */
+#MainContent{
+    /* center the main content block on the page */
+    max-width: 600px; /* limit max width of cotainer for readability */
+    margin: 2rem auto; /* vertical spacing and horizontal centering */
+    padding: 0 1rem; /* horizontal padding for content */
+    box-sizing: border-box; /* include padding/border in width */
+    text-align: center; /* center text inside the content area */
+}
+
+/* Make the page a column flex so footer can stick to bottom when content is short */
+html, body {
+    height: 100%; /* ensure full height for flex layout */
+    margin: 0; /* remove default margin */
+}
+body {
+    display: flex; /* use flexbox for overall page layout */
+    flex-direction: column; /* stack elements vertically */
+}
+
+/* allow main content to grow and push footer down */
+#MainContent {
+    flex: 1 0 auto; 
+}
+
+
+/* Footer: fixed small height (40px) and sits at bottom when page is short */
+#Allfooter {
+        background-color: #9d9d9d; /*sets background color to gray*/
+        color: #ffffff; /* make footer text white for readability */
+        text-align: center; /* center text */
+        padding: 0; /* no vertical padding so height is controlled explicitly */
+        height: 40px; /* requested visible height */
+        line-height: 15px; /* vertically center single-line text */
+        box-sizing: border-box; /* include padding/border in width */
+        border-top: 1px solid #000; /* thin border so it doesn't add too much height */
+        flex-shrink: 0; /* prevent footer from shrinking */
+        font-size: 14px; /* increase font size for readability */
+}
