@@ -16,18 +16,11 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if (!emailRegex.test(emailInput.value)) {
 errors.push("Please enter a valid email address.");
 }
-// Validation for password (minimum length of 6 characters)
-if (passwordInput.value.length < 6) {
-errors.push("Password must be at least 6 characters long.");
-}
-// Validation for password match
-if (passwordInput.value !== confirmPasswordInput.value) {
-errors.push("Passwords do not match.");
-}
 // If there are errors, prevent form submission and display them
 if (errors.length > 0) {
     event.preventDefault(); // Prevent form submission
 alert(errors.join("\n")); // Display error messages in an alert
 }
 });
+
 })
