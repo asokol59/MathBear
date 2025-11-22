@@ -1,0 +1,164 @@
+nav{
+    background-color: #510983; /* purple background for nav */
+    color: #ffffff; /* make nav text readable on purple */
+    font-size: 16pt; /* increase nav text size */
+    padding: 12px 16px; /* add padding for spacing */
+    display: flex; /* use flexbox for layout */
+    gap: 5rem; /* space out nav items */
+    align-items: center; /* vertically center nav items */
+    border: 4px solid black; /* add border to nav */
+}
+
+:link{
+    color: #ffffff; /* unvisited link color */
+    text-decoration: none; /* remove underline from links */
+}
+:visited{
+    color: #ff0; /* visited link color */
+    text-decoration: none; /* remove underline from links */
+}
+
+/* Header navigation bar container */
+#topNavBar {
+    display: flex;  /* use flexbox for layout */
+    align-items: center; /* vertically center items */
+    gap: 0rem; /* no gap between items */
+}
+
+ /* Allow the nav bar to grow and fill the remaining header space */
+#HeaderNav {
+    flex: 1 1 auto; /* allow to grow and shrink, all elements stay proportional to each other*/
+    box-sizing: border-box; /* include padding/border in width */
+    display: flex; /* use flexbox for layout to have all of the navigation links next to each other*/
+    flex-direction: row; /* nav items laid out horizontally across the banner */
+    align-items: center; /* vertically center nav items */
+    justify-content: space-evenly; /* center and evenly space the nav items */
+}
+
+/* Logo styling */
+#MainLogo {
+    display: block; /*adjust display to block for proper sizing */
+    width: 97px; /* keep intended size, change if you want larger/smaller */
+    height: auto; /* maintain aspect ratio */
+    border-bottom: 4px solid black; /* add bottom border to logo */
+    border-left: 4px solid black; /* add left border to logo */
+    border-top: 4px solid black; /* add top border to logo */
+}
+
+/* Remove default paragraph spacing inside the nav so links sit inline wih the logo*/
+nav p {
+    margin: 0; /* Remove default paragraph spacing inside the nav so links sit inline */
+    padding: 0.25rem 0.5rem; /* add padding inside each nav item */
+    text-align: center; /* center text inside each nav item */
+    height: 55px; /* set fixed height for nav items */
+    font-size: 16pt; /* increase nav text size */
+    display: flex;  /* use flexbox for layout */
+    align-items: center; /* vertically center text inside each nav item */
+}
+
+/* Main content area styling */
+#MainContent{
+    /* center the main content block on the page */
+    max-width: 800px; /* limit max width of cotainer for readability */
+    margin: 2rem auto; /* vertical spacing and horizontal centering */
+    padding: 0 1rem; /* horizontal padding for content */
+    box-sizing: border-box; /* include padding/border in width */
+    text-align: center; /* center text inside the content area */
+}
+
+/* Sign-up page specific: bold the form labels and the sign-up header */
+#SignUpHeader {
+    font-weight: 700; /* bold the main heading */
+    font-size: 18pt; /* requested heading size */
+    margin-bottom: 0.75rem;
+    text-align: center; /* center the H1 */
+}
+
+/* Center the main content (already handled) and center form elements */
+#MainContent label {
+    font-weight: 700; /* bold the labels in the main content area */
+}
+
+/* Colors: choose a button color and a form background two shades darker */
+/* Sign-up button color */
+#SignUpForm input[type="submit"] {
+    background-color: #ffd400; /* bright yellow button */
+    color: #000;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    display: block; /* center by making block and auto margin */
+    margin: 0.6rem auto 0 auto;
+}
+
+/* Form container: background two shades darker than the sign-up button */
+#SignUpForm {
+    background-color: #A9A9A9; /* slightly darker than #ffd400 */
+    padding: 1rem 1.25rem; /* breathing room inside the box */
+    border-radius: 10px; /* rounded corners */
+    max-width: 520px; /* keep the form a reasonable width */
+    margin: 1rem auto; /* center the form block horizontally */
+    box-sizing: border-box;
+    text-align: center; /* center labels and inputs inside the form */
+    border: 1px solid #000; /* black border around the form questions area */
+}
+
+/* Make labels left-aligned above inputs and slightly larger */
+#SignUpForm label {
+    display: block;
+    width: 80%; /* match input width so label aligns with textbox */
+    margin: 0.5rem auto 0.25rem auto; /* center block, but label text left-aligned */
+    font-weight: 700; /* keep labels bold */
+    font-size: 1.05rem; /* slightly larger label text */
+    text-align: left; /* left justify label text above textbox */
+}
+
+/* Increase size and padding of input fields and make them centered */
+#SignUpForm input[type="text"],
+#SignUpForm input[type="email"],
+#SignUpForm input[type="password"] {
+    width: 80%;
+    padding: 0.6rem 0.6rem;
+    font-size: 1rem; /* larger response text */
+    margin: 0.25rem auto 0.75rem auto; /* centered with spacing */
+    box-sizing: border-box;
+    border: 1px solid #000; /* black border around each input/question */
+    border-radius: 6px;
+}
+
+/* Make the page a column flex so footer can stick to bottom when content is short */
+html, body {
+    height: 100%; /* ensure full height for flex layout */
+    margin: 0; /* remove default margin */
+}
+body {
+    display: flex; /* use flexbox for overall page layout */
+    flex-direction: column; /* stack elements vertically */
+}
+
+/* Page background: light gray */
+body {
+    background-color: #ffffff;
+}
+
+/* allow main content to grow and push footer down */
+#MainContent {
+    flex: 1 0 auto; 
+}
+
+
+/* Footer: fixed small height (40px) and sits at bottom when page is short */
+#Allfooter {
+        background-color: #9d9d9d; /*sets background color to gray*/
+        color: #ffffff; /* make footer text white for readability */
+        text-align: center; /* center text */
+        padding: 0; /* no vertical padding so height is controlled explicitly */
+        height: 40px; /* requested visible height */
+        line-height: 15px; /* vertically center single-line text */
+        box-sizing: border-box; /* include padding/border in width */
+        border-top: 1px solid #000; /* thin border so it doesn't add too much height */
+        flex-shrink: 0; /* prevent footer from shrinking */
+        font-size: 14px; /* increase font size for readability */
+}
