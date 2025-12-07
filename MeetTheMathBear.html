@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Math Bear</title>
+    <link rel="stylesheet" href="CSS/MathBear.css">
     <link rel="stylesheet" href="CSS/MeetTheBear.css">
     <style>
         h1 { text-align: center;}
-        #maddoxpic {
-            width: 300px;
-            height: auto;
-        }
     </style>
 </head>
 <body>
@@ -22,22 +19,65 @@
             <a href="dataForm.html" id="SignUpLink">Sign-Up</a>
         </header>
     <main id="MainContent">
-        <h1 style="font-size: 16pt"><b>Meet The Math Bear!</b></h1>
+        <h1 style="font-size: 16pt" id="meetMe"><b>Meet The Math Bear!</b></h1>
             <img src="images/Professional.jpg" alt="Professional Picture" id="ProfessionalPic">
-        <p id="ContactInfo">
+        <p id="contactInfo">
             Adam Sokol<br>
             1400 Greene Street<br>
             University of South Carolina<br>
             Phone: 803-544-1349<br>
-            Email: asokol@mailbox.sc.Euclid
+            Email: asokol@mailbox.sc.edu
         </p>
-        <p id="AboutMe">
+        <p id="aboutMe">
             I hold a bachelor`s degree in mathematics. 
             I also have two master`s Degrees, one in Teaching Mathematics 
             and the other in Educational Psychology & Research—a lifelong learner and lover of dogs.  
         </p>
+        <!-- Email me box: visitors can type a question and click Send to open their mail client -->
+        <section id="emailSection">
+            <h2 id="EmailHeader">Email Me</h2>
+            <form id="EmailBox" onsubmit="return false;">
+                <label for="visitorEmail">Your Email:</label>
+                <input type="email" id="visitorEmail" name="visitorEmail" placeholder="you@example.com" required>
+                <label for="visitorMessage">Your Question:</label>
+                <textarea id="visitorMessage" name="visitorMessage" rows="6" placeholder="Type your math question here..." required></textarea>
+
+                <button type="button" id="sendEmailBtn" onclick="sendEmail()">Send</button>
+            </form>
+        </section>
     </main>
+    <script>
+        // email validation helper
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function sendEmail() {
+            const owner = 'asokol@mailbox.sc.edu';
+            const from = document.getElementById('visitorEmail').value.trim();
+            const message = document.getElementById('visitorMessage').value.trim();
+
+            if (!from) {
+                alert('Please enter your email address.');
+                document.getElementById('visitorEmail').focus();
+                return;
+            }
+            if (!isValidEmail(from)) {
+                alert('Please enter a valid email address (example: you@example.com).');
+                document.getElementById('visitorEmail').focus();
+                return;
+            }
+            if (!message) {
+                alert('Please enter your question.');
+                document.getElementById('visitorMessage').focus();
+                return;
+            }
+
+            const subject = encodeURIComponent('Math question from website');
+            const body = encodeURIComponent('From: ' + from + '\n\n' + message);
+            window.location.href = `mailto:${owner}?subject=${subject}&body=${body}`;
+        }
+    </script>
 <footer id="Allfooter"> <a href="MeetTheMathBear.html" id="MeetTheMathBearLink">Contact Me</a></footer>
 </body>
 </html>
-
