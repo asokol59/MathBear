@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Euclid</title>
+    <link rel="stylesheet" href="CSS/MathBear.css">
     <link rel="stylesheet" href="CSS/MeetTheBear.css">
+    <link rel="stylesheet" href="CSS/MBeuclid.css">
 </head>
 <body>
     <header id="topNavBar">
@@ -12,37 +14,77 @@
             <a href="index.html" id="HomeLink">Home</a>
             <a href="MBeuclid.html" id="EuclidLink">Euclid</a>
             <a href="MeetTheMathBear.html" id="MeetTheMathBearLink">Contact Me</a>
-            <a href="dataForm.html" id="SignUpLink">Sign-Up</a>
+             <a href="dataForm.html" id="SignUpLink">Sign-Up</a>
         </nav>
     </header>
     <main>
-        <h1>Euclid</h1>
+        <h1 id="euclidHeader">Euclid</h1>
         <figure>
-        <img src="images/Euclid.jpg" alt="Euclid Image" id="EuclidImage" width="150">
+        <img src="images/Euclid.jpg" alt="Euclid Image" id="euclidImage" width="150">
         <figcaption>Source: www.britannica.com</figcaption>
         </figure>
-        <p>B: 339 BCE, D:275 BCE (Gullberg,J., 1997)</p>
+        <div id="euclidFacts">
+            <p id="bornDied"><b>B: 339 BCE, D:275 BCE (Gullberg,J., 1997)</b></p>
+            <p id="listContemporaries"><b>A short list of contemporaries</b></p>
+            <ul id="contemporariesList">
+                <li>Aristotle (384-322 BCE)</li>
+                <li>Archimedes (c. 287-212 BCE)</li>
+                <li>Eratosthenes (c. 276-194 BCE)</li>
+            </ul>
 
-        <p>A short list of contemporaries</p>
-        <ul>
-            <li>Aristotle (384-322 BCE)</li>
-            <li>Archimedes (c. 287-212 BCE)</li>
-            <li>Eratosthenes (c. 276-194 BCE)</li>
-        </ul>
-        <p>List of Major Works</p>
-        <ul>
-            <li>Elements</li>
-            <li>Data</li>
-            <li>On Divisions of Figures</li>
-            <li>Catoptrics</li>
-            <li>Phaenomena</li>
-        </ul>
-        <p>Euclid, often referred to as the "Father of Geometry," was a Greek mathematician who lived around 300 BCE. 
-            He is best known for his work "Elements," a comprehensive compilation of the knowledge of geometry of his time. 
-            Euclid's Elements consists of 13 books covering various topics, including plane geometry, number theory, and solid geometry. 
-            His systematic approach and logical deductions laid the foundation for modern geometry and influenced mathematical thought for centuries. 
-            Euclid's work has been studied and revered for its clarity, rigor, and enduring impact on mathematics.
-        </p>
-    <footer id="Allfooter"><p>Contact Me</p></footer>
+            <p id="majorWorks"><b>List of Major Works</b></p>
+            <ul id="worksList">
+                <li>Elements</li>
+                <li>Data</li>
+                <li>On Divisions of Figures</li>
+                <li>Catoptrics</li>
+                <li>Phaenomena</li>
+            </ul>
+
+            <p id="Euclidbio">Euclid, often referred to as the "Father of Geometry," was a Greek mathematician who lived around 300 BCE. 
+                He is best known for his work "Elements," a comprehensive compilation of the knowledge of geometry of his time. 
+                Euclid's Elements consists of 13 books covering various topics, including plane geometry, number theory, and solid geometry. 
+                His systematic approach and logical deductions laid the foundation for modern geometry and influenced mathematical thought for centuries. 
+                Euclid's work has been studied and revered for its clarity, rigor, and enduring impact on mathematics.
+            </p>
+        </div>
+        
+        <!-- Euclid's Five Postulates / Axioms -->
+        <section id="euclidAxioms">
+            <h2>Euclid's Five Postulates</h2>
+            <div class="axiom-grid">
+                <article class="axiom-card">
+                    <img src="images/axiom1.svg" alt="A line between two points">
+                    <h3>1. A straight line segment can be drawn joining any two points.</h3>
+                    <p>Given any two points, the straight line segment connecting them can be constructed.</p>
+                </article>
+
+                <article class="axiom-card">
+                    <img src="images/axiom2.svg" alt="Extend a line">
+                    <h3>2. Any straight line segment can be extended indefinitely.</h3>
+                    <p>A straight line segment may be produced continuously in either direction.</p>
+                </article>
+
+                <article class="axiom-card">
+                    <img src="images/axiom3.svg" alt="Circle from segment">
+                    <h3>3. A circle can be drawn with any center and radius.</h3>
+                    <p>Given a line segment, one can construct a circle having the segment as radius.</p>
+                </article>
+
+                <article class="axiom-card">
+                    <img src="images/axiom4.svg" alt="Right angles equal">
+                    <h3>4. All right angles are equal to one another.</h3>
+                    <p>Every right angle is congruent to every other right angle.</p>
+                </article>
+
+                <article class="axiom-card">
+                    <img src="images/axiom5.svg" alt="Parallel postulate diagram">
+                    <h3>5. The parallel postulate.</h3>
+                    <p>If a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer id="Allfooter"><a href="MeetTheMathBear.html" id="MeetTheMathBearLink">Contact Me</a></footer>
 </body>
 </html>
