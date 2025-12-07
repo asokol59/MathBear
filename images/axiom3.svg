@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <circle cx="100" cy="60" r="44" stroke="#000" stroke-width="3" fill="none"/>
+  <circle cx="100" cy="60" r="3" fill="#000"/>
+  <line x1="100" y1="60" x2="144" y2="60" stroke="#000" stroke-width="2"/>
+  <text x="120" y="18" font-family="serif" font-size="16" text-anchor="middle">Axiom 3</text>
+  <text x="120" y="102" font-family="serif" font-size="12" text-anchor="middle">(circle from segment)</text>
+</svg>
